@@ -3,7 +3,6 @@ package main
 import (
 	"log"
 	"net/http"
-
 	"github.com/gorilla/websocket"
 )
 
@@ -28,16 +27,15 @@ func main() {
 	// Create a simple file server
 	fs := http.FileServer(http.Dir("../public"))
 	http.Handle("/", fs)
-
 	// Configure websocket route
 	http.HandleFunc("/ws", handleConnections)
 
 	// Start listening for incoming chat messages
 	go handleMessages()
 
-	// Start the server on localhost port 8000 and log any errors
-	log.Println("http server started on :8000")
-	err := http.ListenAndServe(":8000", nil)
+	// Start the server on localhost port 80 and log any errors
+	log.Println("http server started on :80")
+	err := http.ListenAndServe(":80", nil)
 	if err != nil {
 		log.Fatal("ListenAndServe: ", err)
 	}

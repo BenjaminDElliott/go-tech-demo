@@ -52,6 +52,13 @@ new Vue({
             this.email = $('<p>').html(this.email).text();
             this.username = $('<p>').html(this.username).text();
             this.joined = true;
+            this.ws.send(
+                JSON.stringify({
+                    email: this.email,
+                    username: this.username,
+                    message: '<b>Connected.</b>'// Strip out html
+                }
+            ));
         },
 
         gravatarURL: function(email) {

@@ -2,6 +2,8 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+    background:#165788;
+    color:white;
 }
 
 main {
@@ -13,4 +15,21 @@ main {
     height: 60vh;
     width: 100%;
     overflow-y: scroll;
+}
+nav,footer.page-footer{
+    background:rgba(0,0,0,.8)
+}
+.btn,.btn:visited,.btn:focus{background-color:rgb(101, 207, 233);
+color:white;
+text-transform: uppercase;}
+.btn:hover{
+    background:rgba(101, 207, 233, .7);
+}
+.card{
+    background:rgba(0,0,0,0.1);
+    box-shadow:none;
+}
+input:not([type]):focus:not([readonly]), input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly]), input[type=email]:focus:not([readonly]), input[type=url]:focus:not([readonly]), input[type=time]:focus:not([readonly]), input[type=date]:focus:not([readonly]), input[type=datetime]:focus:not([readonly]), input[type=datetime-local]:focus:not([readonly]), input[type=tel]:focus:not([readonly]), input[type=number]:focus:not([readonly]), input[type=search]:focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid rgb(101, 207, 233);
+    box-shadow: 0 1px 0 0 rgb(101, 207, 233);
 }
